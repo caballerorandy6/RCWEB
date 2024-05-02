@@ -7,7 +7,7 @@ import { Badge } from "../../shadcn/badge";
 
 const SocialLinks = () => {
   return (
-    <nav className="flex justify-center items-center gap-6 font-roboto mb-8">
+    <nav className="flex justify-start items-center gap-6 font-roboto mb-8 ml-4">
       <Link
         href="https://www.linkedin.com/in/caballerorandy/"
         target="_blank"

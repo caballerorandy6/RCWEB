@@ -38,7 +38,7 @@ const ContactLinks = () => {
               href={link.href}
               rel="noopener noreferrer"
               target="_blank"
-              className="flex items-center gap-2 text-gurkha/60 hover:text-gold/80 transition-colors"
+              className="flex items-center gap-2 text-gurkha/80 hover:text-gold/80 transition-colors"
             >
               <TooltipComponent icon={link.icon}>{link.label}</TooltipComponent>
             </Link>

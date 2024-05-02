@@ -8,48 +8,49 @@ import AboutIcon from "./header-icons/AboutIcon";
 import { motion } from "framer-motion";
 import { linkVariants } from "@/app/lib/animations";
 import TooltipComponent from "../../components/TooltipComponent";
+import { usePathname } from "next/navigation";
 
 const nav_links = [
   {
-    url: "/",
+    href: "#home",
     id: "home",
     label: "Home",
-    hash: "#home",
     icon: <HomeIcon />,
   },
   {
-    url: "/experience",
+    href: "#experience",
     id: "experience",
     label: "Experience",
-    hash: "#experience",
     icon: <ExperienceIcon />,
   },
   {
-    url: "/projects",
+    href: "#projects",
     id: "projects",
     label: "Projects",
-    hash: "#projects",
     icon: <ProjectsIcon />,
   },
   {
-    url: "/about",
+    href: "#about",
     id: "about",
     label: "About",
-    hash: "#about",
     icon: <AboutIcon />,
   },
 ];
 
 const Nav = () => {
+  const pathname = usePathname();
+
   return (
     <nav>
       <ul className="flex justify-center items-center gap-8">
         {nav_links.map((link) => (
           <motion.li key={link.id} variants={linkVariants} whileHover={"hover"}>
             <Link
-              href={link.hash}
+              href={link.href}
               rel="noopener noreferrer"
-              className="flex items-center gap-2 text-gurkha/60 hover:text-gold/80 transition-colors"
+              className={`${
+                pathname === link.href ? "text-gold" : "text-gurkha/80"
+              }flex items-center gap-2 text-gurkha/80 hover:text-gold/80 transition-colors`}
             >
               <TooltipComponent icon={link.icon}>{link.label}</TooltipComponent>
             </Link>

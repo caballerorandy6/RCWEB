@@ -25,3 +25,10 @@ export interface ContactsProps {
   download?: string;
   target?: string;
 }
+
+export interface ActivesSectionsProps {
+  activeSection: string;
+  setActiveSection: (section: string) => void;
+  timeOfLastClick?: number;
+  setTimeOfLastClick?: (time: number) => void;
+}
