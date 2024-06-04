@@ -12,25 +12,25 @@ import { usePathname } from "next/navigation";
 
 const nav_links = [
   {
-    href: "#home",
+    href: "home",
     id: "home",
     label: "Home",
     icon: <HomeIcon />,
   },
   {
-    href: "#experience",
+    href: "experience",
     id: "experience",
     label: "Experience",
     icon: <ExperienceIcon />,
   },
   {
-    href: "#projects",
+    href: "projects",
     id: "projects",
     label: "Projects",
     icon: <ProjectsIcon />,
   },
   {
-    href: "#about",
+    href: "about",
     id: "about",
     label: "About",
     icon: <AboutIcon />,
@@ -39,6 +39,7 @@ const nav_links = [
 
 const Nav = () => {
   const pathname = usePathname();
+  console.log(pathname);
 
   return (
     <nav>
